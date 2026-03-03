@@ -3,8 +3,9 @@ data_sources:
   - type: filesystem
     content_dir: content
     layouts_dir: layouts
+    encoding: utf-8
 
-base_url: "https://fosm.parolkar.com"
+base_url: "https://fosm-book.inloop.studio"
 
 title: "Finite Object State Machines"
 subtitle: "Building Business Software for the AI Age"
