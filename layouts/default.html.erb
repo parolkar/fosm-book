@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= @item[:title] || @config[:title] %> — <%= @config[:title] %></title>
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- Analytics — replace with your tracking IDs -->
+  <% if @config[:google_analytics_id] %>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<%= @config[:google_analytics_id] %>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '<%= @config[:google_analytics_id] %>');
+  </script>
+  <% end %>
+  <!-- End Analytics -->
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/" class="brand">FOSM</a>
+    <span class="subtitle">Building Business Software for the AI Age</span>
+  </nav>
+  <main>
+    <%= yield %>
+  </main>
+  <footer>
+    <p>&copy; 2026 Abhishek Parolkar. All rights reserved.</p>
+  </footer>
+</body>
+</html>

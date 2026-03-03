@@ -1,0 +1,78 @@
+<article class="chapter">
+  <header class="chapter-header">
+    <% if @item[:part] %>
+      <span class="part-label"><%= @item[:part] %></span>
+    <% end %>
+    <h1 class="chapter-title">
+      <% if @item[:chapter_number] %>
+        <span class="chapter-number">Chapter <%= @item[:chapter_number] %></span>
+      <% end %>
+      <%= @item[:title] %>
+    </h1>
+  </header>
+
+  <%# Auto-generated collapsible Table of Contents %>
+  <% toc_items = chapter_toc(@item) %>
+  <% unless toc_items.empty? %>
+  <nav class="chapter-toc">
+    <details>
+      <summary>Table of Contents</summary>
+      <ol>
+        <% toc_items.each do |entry| %>
+          <li class="toc-level-<%= entry[:level] %>">
+            <a href="#<%= entry[:id] %>"><%= entry[:title] %></a>
+            <% if entry[:children] && !entry[:children].empty? %>
+            <ol>
+              <% entry[:children].each do |child| %>
+                <li class="toc-level-<%= child[:level] %>">
+                  <a href="#<%= child[:id] %>"><%= child[:title] %></a>
+                </li>
+              <% end %>
+            </ol>
+            <% end %>
+          </li>
+        <% end %>
+      </ol>
+    </details>
+  </nav>
+  <% end %>
+
+  <div class="chapter-body">
+    <%= yield %>
+  </div>
+
+  <% if @item[:summary] %>
+  <aside class="chapter-summary">
+    <h3>What We Built</h3>
+    <ul>
+      <% @item[:summary].each do |point| %>
+        <li><%= point %></li>
+      <% end %>
+    </ul>
+  </aside>
+  <% end %>
+
+  <%# Prev / Next chapter navigation %>
+  <% prev_ch, next_ch = prev_next_chapter(@item) %>
+  <nav class="chapter-nav" aria-label="Chapter navigation">
+    <% if prev_ch %>
+      <a href="<%= prev_ch.path %>" class="chapter-nav-prev">
+        <span class="chapter-nav-label">&larr; Previous</span>
+        <span class="chapter-nav-title"><%= prev_ch[:title] %></span>
+      </a>
+    <% else %>
+      <span class="chapter-nav-prev chapter-nav-disabled"></span>
+    <% end %>
+
+    <a href="/" class="chapter-nav-toc-link">Table of Contents</a>
+
+    <% if next_ch %>
+      <a href="<%= next_ch.path %>" class="chapter-nav-next">
+        <span class="chapter-nav-label">Next &rarr;</span>
+        <span class="chapter-nav-title"><%= next_ch[:title] %></span>
+      </a>
+    <% else %>
+      <span class="chapter-nav-next chapter-nav-disabled"></span>
+    <% end %>
+  </nav>
+</article>

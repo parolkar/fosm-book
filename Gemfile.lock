@@ -1,0 +1,159 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.8.9)
+      public_suffix (>= 2.0.2, < 8.0)
+    adsf (1.5.3)
+      rack (>= 1.0.0, < 4.0.0)
+      rackup (~> 2.1)
+    base64 (0.3.0)
+    builder (3.3.0)
+    coderay (1.1.3)
+    concurrent-ruby (1.3.6)
+    cri (2.15.12)
+    ddmetrics (1.1.0)
+    ddplugin (1.0.3)
+    diff-lcs (1.6.2)
+    immutable-ruby (0.2.0)
+      concurrent-ruby (~> 1.1)
+      sorted_set (~> 1.0)
+    io-console (0.8.2)
+    json_schema (0.21.0)
+    kramdown (2.5.2)
+      rexml (>= 3.4.4)
+    kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
+    logger (1.7.0)
+    memo_wise (1.13.0)
+    method_source (1.1.0)
+    nanoc (4.14.6)
+      addressable (~> 2.5)
+      nanoc-checking (~> 1.0, >= 1.0.2)
+      nanoc-cli (= 4.14.6)
+      nanoc-core (= 4.14.6)
+      nanoc-deploying (~> 1.0)
+      parallel (~> 1.12)
+      tty-command (~> 0.8)
+      tty-which (~> 0.4)
+    nanoc-checking (1.0.6)
+      nanoc-cli (~> 4.12, >= 4.12.5)
+      nanoc-core (~> 4.12, >= 4.12.5)
+    nanoc-cli (4.14.6)
+      cri (~> 2.15)
+      diff-lcs (~> 1.3)
+      logger (~> 1.6)
+      nanoc-core (= 4.14.6)
+      pry
+      zeitwerk (~> 2.1)
+    nanoc-core (4.14.6)
+      base64 (~> 0.2)
+      concurrent-ruby (~> 1.1)
+      ddmetrics (~> 1.0)
+      ddplugin (~> 1.0)
+      immutable-ruby (~> 0.1)
+      json_schema (~> 0.19)
+      memo_wise (~> 1.5)
+      slow_enumerator_tools (~> 1.0)
+      tty-platform (~> 0.2)
+      zeitwerk (~> 2.1)
+    nanoc-deploying (1.0.3)
+      nanoc-checking (~> 1.0)
+      nanoc-cli (~> 4.11, >= 4.11.15)
+      nanoc-core (~> 4.11, >= 4.11.15)
+    parallel (1.27.0)
+    pastel (0.8.0)
+      tty-color (~> 0.5)
+    pry (0.16.0)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+      reline (>= 0.6.0)
+    public_suffix (7.0.5)
+    rack (3.2.5)
+    rackup (2.3.1)
+      rack (>= 3)
+    rbtree (0.4.6)
+    reline (0.6.3)
+      io-console (~> 0.5)
+    rexml (3.4.4)
+    rouge (4.7.0)
+    set (1.1.2)
+    slim (5.2.1)
+      temple (~> 0.10.0)
+      tilt (>= 2.1.0)
+    slow_enumerator_tools (1.1.0)
+    sorted_set (1.0.3)
+      rbtree
+      set (~> 1.0)
+    temple (0.10.4)
+    tilt (2.7.0)
+    tty-color (0.6.0)
+    tty-command (0.10.1)
+      pastel (~> 0.8)
+    tty-platform (0.3.0)
+    tty-which (0.5.0)
+    webrick (1.9.2)
+    zeitwerk (2.7.5)
+
+PLATFORMS
+  arm64-darwin-25
+  ruby
+
+DEPENDENCIES
+  adsf
+  builder
+  kramdown (~> 2.4)
+  kramdown-parser-gfm
+  nanoc (~> 4.12)
+  rouge (~> 4.0)
+  slim (~> 5.0)
+  webrick
+
+CHECKSUMS
+  addressable (2.8.9) sha256=cc154fcbe689711808a43601dee7b980238ce54368d23e127421753e46895485
+  adsf (1.5.3) sha256=f66f61c3b28ed9cf4accc2d3f262fae683c59eda5976059e2447d2a474d5ddf1
+  base64 (0.3.0) sha256=27337aeabad6ffae05c265c450490628ef3ebd4b67be58257393227588f5a97b
+  builder (3.3.0) sha256=497918d2f9dca528fdca4b88d84e4ef4387256d984b8154e9d5d3fe5a9c8835f
+  coderay (1.1.3) sha256=dc530018a4684512f8f38143cd2a096c9f02a1fc2459edcfe534787a7fc77d4b
+  concurrent-ruby (1.3.6) sha256=6b56837e1e7e5292f9864f34b69c5a2cbc75c0cf5338f1ce9903d10fa762d5ab
+  cri (2.15.12) sha256=8abfe924ef53e772a8e4ee907e791d3bfcfca78bc62a5859e3b9899ba29956e5
+  ddmetrics (1.1.0) sha256=ec51ebc809c6c2f0e3b760c7030f2f570affa7553532d673093888107b0aed06
+  ddplugin (1.0.3) sha256=5b270a7b77b49e104699886638758d283901f24c38231baf89c132894dde0b92
+  diff-lcs (1.6.2) sha256=9ae0d2cba7d4df3075fe8cd8602a8604993efc0dfa934cff568969efb1909962
+  immutable-ruby (0.2.0) sha256=1ab896e0d9c8c3fe21ddc3dd29be87511da2f6b0970c5a1c36838a9a4a4605e7
+  io-console (0.8.2) sha256=d6e3ae7a7cc7574f4b8893b4fca2162e57a825b223a177b7afa236c5ef9814cc
+  json_schema (0.21.0) sha256=d6e1eaf004a5185b7679eee34286a79d48e467d794ff68981d72ad23d3b2ec5b
+  kramdown (2.5.2) sha256=1ba542204c66b6f9111ff00dcc26075b95b220b07f2905d8261740c82f7f02fa
+  kramdown-parser-gfm (1.1.0) sha256=fb39745516427d2988543bf01fc4cf0ab1149476382393e0e9c48592f6581729
+  logger (1.7.0) sha256=196edec7cc44b66cfb40f9755ce11b392f21f7967696af15d274dde7edff0203
+  memo_wise (1.13.0) sha256=30220c38c4cef410849bc73553c58664dc2c91c6379e4a1df22aea02358b716b
+  method_source (1.1.0) sha256=181301c9c45b731b4769bc81e8860e72f9161ad7d66dd99103c9ab84f560f5c5
+  nanoc (4.14.6) sha256=013d8ae732b0b55b2228a7a26a0ee77ff3def38fc7384d9c25276183460a4152
+  nanoc-checking (1.0.6) sha256=dd1d3c57cc75a9580f082c77dfa22221806ff65d28b25b1ab0c7471455bdd481
+  nanoc-cli (4.14.6) sha256=eb4aec67de6ea3ac414d8b6c1d4f0ff4bd89ddc333962c1ef64af158f8fca11d
+  nanoc-core (4.14.6) sha256=7562f2ad5bbc834462e8a831a8c0fbe2fbf6416451fcd86b6f9861fb02f9f6b9
+  nanoc-deploying (1.0.3) sha256=ca583eab659a3dd92aa8ff227c089af6042c85b0e9fc1d7ce527798eb974fc5b
+  parallel (1.27.0) sha256=4ac151e1806b755fb4e2dc2332cbf0e54f2e24ba821ff2d3dcf86bf6dc4ae130
+  pastel (0.8.0) sha256=481da9fb7d2f6e6b1a08faf11fa10363172dc40fd47848f096ae21209f805a75
+  pry (0.16.0) sha256=d76c69065698ed1f85e717bd33d7942c38a50868f6b0673c636192b3d1b6054e
+  public_suffix (7.0.5) sha256=1a8bb08f1bbea19228d3bed6e5ed908d1cb4f7c2726d18bd9cadf60bc676f623
+  rack (3.2.5) sha256=4cbd0974c0b79f7a139b4812004a62e4c60b145cba76422e288ee670601ed6d3
+  rackup (2.3.1) sha256=6c79c26753778e90983761d677a48937ee3192b3ffef6bc963c0950f94688868
+  rbtree (0.4.6) sha256=14eea4469b24fd2472542e5f3eb105d6344c8ccf36f0b56d55fdcfeb4e0f10fc
+  reline (0.6.3) sha256=1198b04973565b36ec0f11542ab3f5cfeeec34823f4e54cebde90968092b1835
+  rexml (3.4.4) sha256=19e0a2c3425dfbf2d4fc1189747bdb2f849b6c5e74180401b15734bc97b5d142
+  rouge (4.7.0) sha256=dba5896715c0325c362e895460a6d350803dbf6427454f49a47500f3193ea739
+  set (1.1.2) sha256=ca33a60d202e788041d94a5d4c12315b1639875576f1a266f3a10913646d8ef1
+  slim (5.2.1) sha256=72351dff7e2ff20e2d5c393cfc385bb9142cef5db059141628fd7163ac3c13e7
+  slow_enumerator_tools (1.1.0) sha256=e61a598f1c8309ac731d21659a79767c20ff345458cfc70819ae57df25910e5e
+  sorted_set (1.0.3) sha256=4f2b8bee6e8c59cbd296228c0f1f81679357177a8b6859dcc2a99e86cce6372f
+  temple (0.10.4) sha256=b7a1e94b6f09038ab0b6e4fe0126996055da2c38bec53a8a336f075748fff72c
+  tilt (2.7.0) sha256=0d5b9ba69f6a36490c64b0eee9f6e9aad517e20dcc848800a06eb116f08c6ab3
+  tty-color (0.6.0) sha256=6f9c37ca3a4e2367fb2e6d09722762647d6f455c111f05b59f35730eeb24332a
+  tty-command (0.10.1) sha256=0c6c471fcb932d55518734eb4e2e07e9efdd2918713cc39bb7393ba862471192
+  tty-platform (0.3.0) sha256=e23937b100e84a1bf9ce32352b4c04d526da1c2510668ce1f27f8ae79142050a
+  tty-which (0.5.0) sha256=5824055f0d6744c97e7c4426544f01d519c40d1806ef2ef47d9854477993f466
+  webrick (1.9.2) sha256=beb4a15fc474defed24a3bda4ffd88a490d517c9e4e6118c3edce59e45864131
+  zeitwerk (2.7.5) sha256=d8da92128c09ea6ec62c949011b00ed4a20242b255293dd66bf41545398f73dd
+
+BUNDLED WITH
+  4.0.7

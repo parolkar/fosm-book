@@ -1,0 +1,15 @@
+string_pattern_type: glob
+data_sources:
+  - type: filesystem
+    content_dir: content
+    layouts_dir: layouts
+
+base_url: "https://fosm.parolkar.com"
+
+title: "Finite Object State Machines"
+subtitle: "Building Business Software for the AI Age"
+author: "Abhishek Parolkar"
+
+# Analytics — set your tracking ID here to enable Google Analytics site-wide.
+
+google_analytics_id: "G-BM1GJ2665W"

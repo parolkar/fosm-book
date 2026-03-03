@@ -1,0 +1,49 @@
+#!/usr/bin/env ruby
+
+preprocess do
+  # Ensure all chapter items have is_hidden set for sitemap filtering
+  @items.each do |item|
+    item[:is_hidden] = true if item.identifier.to_s =~ /\A\/llms\.txt/
+  end
+end
+
+compile '/chapters/**/*.md' do
+  filter :kramdown,
+    input: 'GFM',
+    syntax_highlighter: 'rouge',
+    syntax_highlighter_opts: { css_class: 'highlight', default_lang: 'ruby' },
+    auto_ids: true,
+    toc_levels: [2, 3]
+  layout '/chapter.*'
+  layout '/default.*'
+  write item.identifier.without_ext + '/index.html'
+end
+
+compile '/index.md' do
+  filter :kramdown,
+    input: 'GFM',
+    syntax_highlighter: 'rouge',
+    auto_ids: true
+  layout '/default.*'
+  write '/index.html'
+end
+
+compile '/llms.txt.erb' do
+  filter :erb
+  write '/llms.txt'
+end
+
+compile '/sitemap.xml' do
+  filter :erb
+  write '/sitemap.xml'
+end
+
+compile '/**/*.css' do
+  write item.identifier.to_s
+end
+
+compile '/**/*' do
+  write item.identifier.to_s
+end
+
+layout '/**/*', :erb
